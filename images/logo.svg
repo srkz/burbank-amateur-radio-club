@@ -1,85 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  BARC logo: a stylized Shiba Inu in profile, mouth open,
+  BARC logo: a line-art Shiba Inu in profile, mouth open,
   with radio waves emanating instead of a "bark" sound.
-  Designed to scale cleanly and work at small sizes.
+  Designed as a simple black outline that scales cleanly.
 -->
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 320 200"
+     viewBox="0 0 900 950"
      role="img"
      aria-labelledby="logoTitle logoDesc">
   <title id="logoTitle">Burbank Amateur Radio Club logo</title>
   <desc id="logoDesc">
-    A stylized Shiba Inu in side profile with an open mouth.
-    Three concentric radio waves radiate outward from the dog's
+    A line-art Shiba Inu in side profile with an open mouth and a curled
+    tail. Three concentric radio waves radiate outward from the dog's
     mouth in place of a bark.
   </desc>
 
-  <!-- Color palette kept in one place for easy theming -->
-  <defs>
-    <style>
-      .fur      { fill: #c75b2a; }
-      .cream    { fill: #f3e2c4; }
-      .ink      { fill: #1f1a17; }
-      .ink-s    { stroke: #1f1a17; stroke-width: 3; fill: none; stroke-linecap: round; }
-      .wave     { stroke: #1f4f7a; stroke-width: 4; fill: none; stroke-linecap: round; }
-    </style>
-  </defs>
+  <g fill="none" stroke="#000" stroke-width="16"
+     stroke-linecap="round" stroke-linejoin="round">
 
-  <!-- Back ear (behind head) -->
-  <path class="fur" d="M70,48 L88,14 L110,52 Z"/>
+    <!-- Head, ears, back, tail, chest outline (continuous silhouette) -->
+    <path d="
+      M 545 195
+      L 470 75
+      L 410 200
+      L 345 135
+      L 300 235
+      C 250 260 205 305 180 360
+      C 155 420 150 495 175 560
+      C 140 565 110 585 95 625
+      C 80 670 100 720 145 735
+      C 175 745 205 735 225 715
+      C 245 735 265 755 290 770
+      L 295 915
+      M 360 790
+      L 365 920
+      M 540 800
+      L 545 920
+      M 655 760
+      L 660 915
+      C 560 830 470 820 385 820
+      C 320 820 265 805 230 775
+    "/>
 
-  <!-- Main head / body silhouette facing right -->
-  <path class="fur"
-        d="M40,110
-           C 38,70 70,40 110,40
-           C 140,40 160,58 168,82
-           L 205,92
-           L 218,108
-           L 205,118
-           L 168,122
-           C 162,138 148,148 128,150
-           C 96,152 70,142 56,130
-           C 46,124 41,118 40,110 Z"/>
+    <!-- Curled tail -->
+    <path d="
+      M 220 480
+      C 170 445 120 470 105 525
+      C 95 575 130 620 180 615
+      C 220 610 240 575 225 545
+      C 215 525 190 520 175 540
+      C 165 555 175 575 195 575
+    "/>
 
-  <!-- Cream cheek / muzzle patch -->
-  <path class="cream"
-        d="M120,100
-           C 132,98 152,100 168,105
-           L 200,108
-           L 210,108
-           L 200,117
-           L 168,120
-           C 152,122 132,120 120,116 Z"/>
+    <!-- Back line and rump connecting to tail base -->
+    <path d="M 230 470 C 290 420 370 395 445 395"/>
 
-  <!-- Front ear -->
-  <path class="fur" d="M108,50 L128,18 L146,54 Z"/>
-  <path class="cream" d="M118,44 L128,28 L138,46 Z"/>
+    <!-- Belly line -->
+    <path d="M 295 770 C 370 790 460 790 545 775"/>
 
-  <!-- Eye -->
-  <circle class="ink" cx="135" cy="78" r="5"/>
-  <circle cx="136.5" cy="76.5" r="1.4" fill="#fff"/>
+    <!-- Muzzle, open mouth, jaw -->
+    <path d="
+      M 540 200
+      C 605 210 660 255 690 310
+      C 705 340 700 370 680 385
+      L 735 360
+    "/>
+    <path d="
+      M 680 385
+      C 650 395 615 395 585 385
+      C 560 378 545 365 540 350
+    "/>
+    <!-- Small teeth / tongue hint inside mouth -->
+    <path d="M 610 360 L 620 380 L 635 362"/>
 
-  <!-- Brow mark (classic shiba spot) -->
-  <path class="ink" d="M124,64 q6,-4 14,-2 q-6,-1 -14,4 Z" opacity="0.55"/>
+    <!-- Closed, smiling eye -->
+    <path d="M 495 255 q 25 -20 55 0"/>
 
-  <!-- Nose -->
-  <path class="ink" d="M204,104 q8,2 10,6 q-2,4 -10,4 z"/>
+    <!-- Nose dot -->
+    <circle cx="720" cy="325" r="10" fill="#000" stroke="none"/>
 
-  <!-- Open mouth: upper jaw line + lower jaw + tongue -->
-  <path class="ink-s" d="M200,113 q-4,6 -14,7"/>
-  <path class="fur"    d="M186,120 q8,8 18,6 q-2,4 -8,6 q-10,2 -14,-4 Z"/>
-  <path fill="#d86a7a" d="M190,124 q6,4 12,3 q-2,3 -6,4 q-6,0 -8,-3 Z"/>
-
-  <!-- Collar accent -->
-  <rect class="ink" x="66" y="134" width="46" height="8" rx="2"/>
-  <circle cx="89" cy="138" r="3" fill="#e8b845"/>
-
-  <!-- Radio waves emanating from the mouth in place of a bark.
-       Three concentric arcs, opening to the right. -->
-  <g class="wave" transform="translate(214,112)">
-    <path d="M2,-10 A 12,12 0 0 1 2,10"/>
-    <path d="M14,-20 A 24,24 0 0 1 14,20"/>
-    <path d="M26,-30 A 36,36 0 0 1 26,30"/>
+    <!-- Radio waves emanating from the mouth -->
+    <path d="M 760 255 A 90 90 0 0 1 760 385"/>
+    <path d="M 800 215 A 140 140 0 0 1 800 425"/>
+    <path d="M 840 175 A 190 190 0 0 1 840 465"/>
   </g>
 </svg>
